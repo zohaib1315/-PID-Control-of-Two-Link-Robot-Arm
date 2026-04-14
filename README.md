@@ -40,6 +40,39 @@ Each controller was tested for:
 
 ---
 
+## 📁 Project Structure
+
+The project is organized into separate Simulink models for each control strategy:
+
+- `P_Controller.slx` → Proportional (P) control implementation  
+- `PI_Controller.slx` → Proportional-Integral (PI) control implementation  
+- `PID_Controller.slx` → Full PID control implementation  
+
+Each model includes:
+- Two-link robot arm (Simscape Multibody)
+- Independent joint control loops
+- Torque actuation and sensor feedback
+- Reference tracking (step and square wave)
+
+---
+
+## 🔄 Comparison Study
+
+The three controllers are implemented in separate files to allow clear performance comparison:
+
+- **P Controller** → Fast response but steady-state error  
+- **PI Controller** → Eliminates steady-state error but may introduce oscillations  
+- **PID Controller** → Best overall performance with improved stability and tracking accuracy  
+
+---
+
+## ▶️ How to Run
+
+1. Open any controller file (`.slx`)
+2. Run the simulation
+3. Observe joint tracking in Scope
+4. Compare responses across P, PI, and PID models
+
 ## 📊 Results
 
 | Controller | Behavior |
